@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+text-decoration: none;
+list-style: none;
+font-family: 'Work Sans', sans-serif;
+} 
+
+html {
+margin: 0;
+max-width: 1440px;
+}
+
+body{
+min-height: 100%;
+height: 100vh;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-image:url(../img/blaz-photo-cZWZjymwI9o-unsplash.jpg) ;
+background-repeat: no-repeat;
+background-size:cover;
+background-position: top center;
+background-color: #ebccc2 ;
+background-blend-mode: multiply;  
+}
+
+/*--------------------------------------------Header-----------------*/
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/*---------------------------------Fixed Navigation für Social Media-----------------------------------------*/
+
+nav {
+padding-right: 8%;
+position: fixed;
+top: 0;
+right: 0;
+}
+
+header nav ul{
+display: flex;
+}
+
+ul li {
+display: flex;
+white-space: nowrap;
+padding: 3%;
+font-size: .5rem;
+}
+
+ul li:first-of-type {
+padding-right: 13%;
+}
+
+ul li:nth-of-type(4){
+padding-right: 13%; 
+}
+
+a {
+color: #ebccc2;
+font-size: .5rem;
+}
+
+a:hover {
+color: rgb(234, 204, 194);
+font-size: .5rem;
+}
+
+/*--------------------------------Fixed Logo------------------------------------------*/
+
+.logo img {
+width: 2%;
+padding: 1.5% 0 0 3%;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+/*----------------------------------------Jetzt kommt die Side Navigation Bar-------------------------------------------*/
+
+
+
+.navmenu {
+position: fixed;
+top: 50%;
+left: 2%;
+transform: translateY(-50%);
+}
+
+.navmenu ul {
+padding-left: 50px;
+position: relative;
+}
+
+.navmenu ul::after {
+content: "";
+position: absolute;
+width: 3px;
+height: calc(100% - 63px);
+background:  #867772;
+left: 40px;
+top: 0;
+z-index: -1;
+margin-top: 29px;
+}
+
+.navmenu ul li {               /*----------Bullet points padding von den li´s----------*/
+padding-left: 20px;
+padding: 30px 0;
+}
+
+.navmenu ul li a {
+text-decoration: none;
+position: relative;
+color:rgb(115, 115, 115);  
+font-size: 1.1rem;
+line-height: 1rem;
+font-weight: 300;
+padding-left: 5.5%;
+cursor: pointer;
+}
+
+/*-------- Hovereffekt einfügen---------------------------------*/
+.navmenu ul li a:hover {
+text-decoration: none;
+position: relative;
+color:#fff ;  
+font-size: 1.1rem;
+line-height: 1rem;
+font-weight: 300;
+padding-left: 5.5%;
+cursor: pointer;
+}
+/*----------------------------------Bullet points!--------------*/
+.navmenu ul li a::before {
+content: "";
+position: absolute;
+background: #2e2e2e;
+width: 21px;
+height: 21px;
+left: -21px; /* Ich denke, dass es hilft, um die Kreise genau auf die Linien zubringen*/
+top: 50%;
+transform: translateY(-50%);
+border-radius: 50px;
+border: 2px solid #fff;
+transition: background 250ms;
+}
+
+.navmenu ul li a.active {
+font-weight: 700;
+}
+
+.navmenu ul li a.active::before {     
+background: rgb(115, 115, 115);
+}
+
+/*--------------------------Überschrift----------------------------------------*/
+
+.news h1, .news h2 {
+color:#ebccc2 ;
+font-weight: 300;
+text-align: center;
+}
+
+.news {
+transform: translateY(115%);
+}
+
+.news h1 {
+font-size: 5rem;
+margin-bottom: 2%;
+}
+
+.email {
+text-align: center;
+transform: translateY(300%);
+}
+
+.email input[type="email"]  {
+width: 35%;
+line-height: 3.5rem;
+border-radius: 5px;
+text-align: center;
+background-color:#ebccc2 ;
+}
+
+.emailButton  {
+width: 11%;
+height: 6%;
+border-radius: 2px;
+background-color:rgb(115, 115, 115) ;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 15% auto 0 auto;
+}
+
+.emailButton a {
+color: #ebccc2;
+font-size: 1.3rem;
+cursor: pointer;
+}
+
+.emailButton a:hover {
+color: #ebccc2;
+font-size: 1.3rem;
+cursor: pointer;
+}
+
+.emailButton:hover {
+width: 11%;
+height: 6%;
+border-radius: 2px;
+background-color:transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
